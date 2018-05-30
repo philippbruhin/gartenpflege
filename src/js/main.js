@@ -26,10 +26,10 @@ $(function() {
 
 
 
-    $('body').vegas({
+    $('header').vegas({
         timer: false,
         transition: 'fade',
-        delay: 3000,
+        delay: 8000,
         cover: true,
         slides: randombgs
     });

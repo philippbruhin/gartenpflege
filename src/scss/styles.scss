@@ -28,24 +28,41 @@
 @import "../../node_modules/vegas/src/sass/vegas";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,70";
 
-html, body {
-    height: 100%;
-}
-
+html,
 body {
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* needed for container min-height */
 }
 
 header {
-    flex: 1 0 auto;
-    letter-spacing: 0.5em;
+    min-height: 90%;
+    h1 {
+        color: $base-background-color;
+        line-height: 100px;
+        font-size: 60px;
+    }
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#map {
+    min-height: 400px;
 }
 
 footer {
-    flex-shrink: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    .container {
+
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    img {
+        max-width: 200px;
+    }
 }
 
 .backgroundcolor {

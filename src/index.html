@@ -15,16 +15,35 @@
   <header>
     <div class="text-center">
       <div class="container-full">
-        <h1>Marco Schättin Gartenpflege</h1>
+        <h1>Schättin Gartenpflege</h1>
       </div>
     </div>
   </header>
 
+  <main class="container">
+
+      <h1>Ihr Spezialist für den Gartenunterhalt</h1>
+
+      <p>Nach der Ausbildung zum <strong>Gärtner EFZ</strong> sammelte ich bei einem renommierten <strong>Gartenbauer</strong> aus der Region March während 10 Jahren Berufserfahrung in den verschiedensten Gartenbaudisziplinen. Spezialisiert habe ich mich auf den Bereich <strong>Gartenunterhalt</strong> – in welchem ich seit dem 1. Juni 2018 selbständig tätig bin.</p>
+      <p>Fachmännischer <strong>Baum- und Heckenschnitt, Palme einwintern, Bepflanzungen, Entsorgung von Grüngut, Garten- und Weihnachtsdeko.</strong> Gerne erzähle ich Ihnen mehr von mir und meinen Dienstleistungen.</p>
+      <p>Über eine Kontaktaufnahme freue ich mich!</p>
+      <p>Ihr Marco Schättin</p>
+
+  </main>
+
   <footer>
     <div class="backgroundcolor">
       <div class="container">
-        <p>Marco Schättin Gartenpflege GmbH<br>Zopfstrasse 20<br>8855 Wangen SZ</p>
-        <p>Telefon: 079 299 49 71<br>E-Mail: info@marco-schaettin-gartenpflege.ch</p>
+        <div class="row">
+          <div class="col col-12 col-6-m">
+            <img src="img/logo.jpg" class="left" alt="Logo Marco Schättin Gartenunterhalt GmbH">
+            <p><strong>Marco Schättin Gartenpflege GmbH</strong><br>Zopfstrasse 20<br>8855 Wangen SZ</p>
+            <p>Telefon: 079 299 49 71<br>E-Mail: info@marco-schaettin-gartenpflege.ch</p>
+          </div>
+          <div class="col col-12 col-6-m">
+          </div>
+        </div>
+        <div id="map"></div>
       </div>
     </div>
   </footer>
@@ -32,6 +51,91 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.0/vegas.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
 
+      function initMap() {
+    
+          // Custom Map
+        var customMapType = new google.maps.StyledMapType(
+        [
+          {
+            stylers: [
+            {hue: '#0275D8'},
+            {visibility: 'simplified'},
+            {gamma: 0},
+            {weight: 0},
+            {saturation: 0},
+            {lightness: 0}
+            ]
+          }
+        ]
+        ,{ name: 'Karte Rot' });
+    
+        var customMapTypeId = 'custom_style';
+    
+        
+        // Custom positions
+            var tuggen = {
+                info: '<strong>Theorielokal</strong><br />Linthstrasse 54<br />8856 Tuggen',
+                lat: 47.1986050,
+                long: 8.9421810
+            };
+    
+            var schuebelbach = {
+                info: '<strong>Fahrschule CLAUDE</strong><br />Hofstrasse 1a<br />8862 Schübelbach',
+                lat: 47.1746990,
+                long: 8.9226800
+            };
+    
+    
+            var locations = [
+              [tuggen.info, tuggen.lat, tuggen.long, 0],
+              [schuebelbach.info, schuebelbach.lat, schuebelbach.long, 1]
+            ];
+                
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: {lat: 47.1878833, lng: 8.9369279},
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId,google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.SATELLITE]
+                },
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: true,
+                streetViewControl: true,
+                rotateControl: true,
+                scrollwheel: true,
+                fullscreenControl: true
+            });
+    
+            var infowindow = new google.maps.InfoWindow({});
+        
+            var iconBase = 'img/';
+            var marker, i;
+            
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    icon: iconBase + 'maps-marker.png'
+                });
+        
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+            
+            // Set default map type
+        //map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+        //map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+        map.mapTypes.set(customMapTypeId, customMapType);
+        map.setMapTypeId(customMapTypeId);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC4izULHdLACBUCp-IZREnbBSYZMXDYXE&callback=initMap"></script>
 </body>
 </html>
