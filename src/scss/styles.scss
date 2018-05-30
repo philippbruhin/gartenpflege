@@ -35,12 +35,37 @@ body {
   height: 100%; /* needed for container min-height */
 }
 
+.darkbackground {
+    color: #fff;
+    background-color: $base-link-color;
+}
+
+.container, .container-full {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+@media only screen and (min-width: $breakpoint-m) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+}
+
 header {
+    margin-top: 20px;
     min-height: 90%;
     h1 {
         color: $base-background-color;
-        line-height: 100px;
-        font-size: 60px;
+        margin: 0;
+    }
+    .darkbackground {
+        margin: 20px 0;
+        padding: 5px 10px;
     }
 }
 
@@ -50,21 +75,12 @@ main {
 }
 
 #map {
+    margin-top: 20px;
     min-height: 400px;
 }
 
 footer {
-    .container {
-
-    }
-    p {
-        margin-bottom: 10px;
-    }
     img {
-        max-width: 200px;
+        max-width: 250px;
     }
-}
-
-.backgroundcolor {
-    background-color: rgba($color: $base-background-color, $alpha: 0.8)
 }

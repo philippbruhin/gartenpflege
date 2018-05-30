@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,70";
+@grid-gutter : 20px;
 /* ==========================================================================
 
 // Base Animations - http://getbase.org
@@ -5,7 +7,6 @@
 // Version: 4.0.0 - Last Updated: April 13, 2018
 
 ========================================================================== */
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,70";
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -469,16 +470,16 @@ template {
     text-decoration: none; }
 
 .button-link {
-  color: #0b6623;
+  color: #8CC540;
   text-decoration: underline;
   border: 0;
   background: transparent;
   padding: 0; }
   .button-link:hover {
-    color: #000;
+    color: #868686;
     text-decoration: none; }
   .button-link:active {
-    color: #000;
+    color: #868686;
     outline: 0; }
 
 /* ==========================================================================
@@ -1320,7 +1321,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #000;
+  color: #868686;
   font-weight: 400;
   background: #fff; }
 
@@ -1328,16 +1329,16 @@ p {
   margin: 0 0 20px 0; }
 
 a {
-  color: #0b6623;
+  color: #8CC540;
   text-decoration: underline;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #000;
+    color: #868686;
     outline-width: 0;
     text-decoration: none; }
   a:active {
-    color: #000; }
+    color: #868686; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
@@ -1368,27 +1369,27 @@ h6, .fs-6 {
   line-height: 20px; }
 
 h1 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 h2 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 h3 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 h4 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 h5 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 h6 {
-  color: #0b6623;
+  color: #8CC540;
   font-weight: 700; }
 
 b, strong, .strong {
@@ -2791,27 +2792,42 @@ body {
   height: 100%;
   /* needed for container min-height */ }
 
+.darkbackground {
+  color: #fff;
+  background-color: #8CC540; }
+
+.container, .container-full {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto; } }
+
 header {
+  margin-top: 20px;
   min-height: 90%; }
   header h1 {
     color: #fff;
-    line-height: 100px;
-    font-size: 60px; }
+    margin: 0; }
+  header .darkbackground {
+    margin: 20px 0;
+    padding: 5px 10px; }
 
 main {
   padding-top: 40px;
   padding-bottom: 40px; }
 
 #map {
+  margin-top: 20px;
   min-height: 400px; }
 
-footer p {
-  margin-bottom: 10px; }
-
 footer img {
-  max-width: 200px; }
-
-.backgroundcolor {
-  background-color: rgba(255, 255, 255, 0.8); }
+  max-width: 250px; }
 
 /*# sourceMappingURL=styles.css.map */

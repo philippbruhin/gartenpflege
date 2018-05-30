@@ -12,11 +12,9 @@
 </head>
 <body>
 
-  <header>
+  <header class="container-full">
     <div class="text-center">
-      <div class="container-full">
-        <h1>Schättin Gartenpflege</h1>
-      </div>
+        <h1>Marco Schättin Gartenpflege</h1>
     </div>
   </header>
 
@@ -32,19 +30,32 @@
   </main>
 
   <footer>
-    <div class="backgroundcolor">
-      <div class="container">
-        <div class="row">
-          <div class="col col-12 col-6-m">
-            <img src="img/logo.jpg" class="left" alt="Logo Marco Schättin Gartenunterhalt GmbH">
-            <p><strong>Marco Schättin Gartenpflege GmbH</strong><br>Zopfstrasse 20<br>8855 Wangen SZ</p>
-            <p>Telefon: 079 299 49 71<br>E-Mail: info@marco-schaettin-gartenpflege.ch</p>
-          </div>
-          <div class="col col-12 col-6-m">
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-12 col-6-m">
+          <p><strong>Marco Schättin Gartenpflege GmbH</strong><br>Zopfstrasse 20<br>8855 Wangen SZ</p>
+          <p>Telefon: <a href="tel:0041792994971">079 299 49 71</a>
+          <br>E-Mail: <script>
+              var pref     = "&#109;a" + "i&#108;" + "&#116;o:";
+              var attr     = "hr" + "ef" + "=";
+              var atV1     = "%40";
+              var atV2     = "&#x40;";
+              var aliasV1  = "&#105;&#110;&#102;&#111;";
+              var aliasV2  = "&#x69;&#x6e;&#x66;&#x6f;";
+              var domainV1 = "&#109;&#97;&#114;&#99;&#111;&#45;&#115;&#99;&#104;&#97;&#101;&#116;&#116;&#105;&#110;&#45;&#103;&#97;&#114;&#116;&#101;&#110;&#112;&#102;&#108;&#101;&#103;&#101;&#46;&#99;&#104;";
+              var domainV2 = "&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x2d;&#x73;&#x63;&#x68;&#x61;&#x65;&#x74;&#x74;&#x69;&#x6e;&#x2d;&#x67;&#x61;&#x72;&#x74;&#x65;&#x6e;&#x70;&#x66;&#x6c;&#x65;&#x67;&#x65;&#x2e;&#x63;&#x68;";
+              document.write("<a "+attr+"\""+pref+aliasV1+atV1+domainV1+"\">");
+              document.write(aliasV2+atV2+domainV2);
+              document.write("<\/a>");
+              </script>
+              <noscript><span style="display:none;">-mfG0815</span>&#105;&#110;&#102;&#111;<span style="display:none;">-qwr2342</span> [&#97;&#116;] <span style="display:none;">-hfg3453</span>&#x6d;&#x61;&#x72;&#x63;&#x6f;&#x2d;&#x73;&#x63;&#x68;&#x61;&#x65;&#x74;&#x74;&#x69;&#x6e;&#x2d;&#x67;&#x61;&#x72;&#x74;&#x65;&#x6e;&#x70;&#x66;&#x6c;&#x65;&#x67;&#x65;&#x2e;&#x63;&#x68;<span style="display:none;">-tdg6435</span></noscript>
+              </p>
         </div>
-        <div id="map"></div>
+        <div class="col col-12 col-6-m">
+            <!-- <img src="img/logo.jpg" alt="Logo Marco Schättin Gartenunterhalt GmbH"> -->
+        </div>
       </div>
+      <div id="map"></div>
     </div>
   </footer>
 
@@ -60,47 +71,39 @@
         [
           {
             stylers: [
-            {hue: '#0275D8'},
+            {hue: '#FFFFFF'},
             {visibility: 'simplified'},
             {gamma: 0},
             {weight: 0},
-            {saturation: 0},
-            {lightness: 0}
+            {saturation: -100},
+            {lightness: 25}
             ]
           }
         ]
-        ,{ name: 'Karte Rot' });
+        ,{ name: 'Karte Grau' });
     
         var customMapTypeId = 'custom_style';
     
         
         // Custom positions
-            var tuggen = {
-                info: '<strong>Theorielokal</strong><br />Linthstrasse 54<br />8856 Tuggen',
-                lat: 47.1986050,
-                long: 8.9421810
-            };
-    
-            var schuebelbach = {
-                info: '<strong>Fahrschule CLAUDE</strong><br />Hofstrasse 1a<br />8862 Schübelbach',
-                lat: 47.1746990,
-                long: 8.9226800
-            };
-    
+            var wangen = {
+                info: '<strong>Marco Schättin Gartenpflege GmbH</strong><br />Zopfstrasse 20<br />8855 Wangen',
+                lat: 47.1884710,
+                long: 8.9003050
+            };    
     
             var locations = [
-              [tuggen.info, tuggen.lat, tuggen.long, 0],
-              [schuebelbach.info, schuebelbach.lat, schuebelbach.long, 1]
+              [wangen.info, wangen.lat, wangen.long, 0],
             ];
                 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 13,
-                center: {lat: 47.1878833, lng: 8.9369279},
+                center: {lat: 47.1884710, lng: 8.9003050},
                 mapTypeControlOptions: {
                     mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId,google.maps.MapTypeId.TERRAIN, google.maps.MapTypeId.SATELLITE]
                 },
                 zoomControl: true,
-                mapTypeControl: false,
+                mapTypeControl: true,
                 scaleControl: true,
                 streetViewControl: true,
                 rotateControl: true,

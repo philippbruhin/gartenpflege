@@ -5,10 +5,10 @@ $base-font-family:                              'Open Sans', sans-serif;
 $base-font-size:                                16px;
 $base-line-height:                              22px;
 $base-font-weight:                              400;
-$base-font-color:                               #000;
-$base-link-color:                               #0b6623;
-$base-link-hover-color:                         #000;
-$base-link-active-color:                        #000;
+$base-font-color:                               #868686;
+$base-link-color:                               #8CC540;
+$base-link-hover-color:                         #868686;
+$base-link-active-color:                        #868686;
 
 // Headings
 $base-heading-font-family:                      'Open Sans', sans-serif;
@@ -51,4 +51,8 @@ $base-code-line-height:                         18px;
 $base-code-color:                               #000;
 $base-code-background-color:                    #f7f7f7;
 $base-code-border-color:                        #e7e7e7;
+
+// Variables
+
+@grid-gutter: 20px;
 
