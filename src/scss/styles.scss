@@ -24,3 +24,30 @@
 @import "../../node_modules/@getbase/typography-helpers/scss/index";
 @import "../../node_modules/@getbase/layout-helpers/scss/index";
 @import "../../node_modules/@getbase/layout-spacers/scss/index";
+
+@import "../../node_modules/vegas/src/sass/vegas";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,70";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 1 0 auto;
+    letter-spacing: 0.5em;
+}
+
+footer {
+    flex-shrink: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.backgroundcolor {
+    background-color: rgba($color: $base-background-color, $alpha: 0.8)
+}
