@@ -19,7 +19,7 @@ $(function() {
     ]
     
     // Suffle the array
-    randombgs = shuffle(bgimages);
+    var randombgs = shuffle(bgimages);
 
 
 
