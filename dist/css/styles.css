@@ -476,10 +476,10 @@ template {
   background: transparent;
   padding: 0; }
   .button-link:hover {
-    color: #868686;
+    color: #000;
     text-decoration: none; }
   .button-link:active {
-    color: #868686;
+    color: #000;
     outline: 0; }
 
 /* ==========================================================================
@@ -1321,7 +1321,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #868686;
+  color: #000;
   font-weight: 400;
   background: #fff; }
 
@@ -1334,11 +1334,11 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #868686;
+    color: #000;
     outline-width: 0;
     text-decoration: none; }
   a:active {
-    color: #868686; }
+    color: #000; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
@@ -2822,6 +2822,10 @@ header {
 main {
   padding-top: 40px;
   padding-bottom: 40px; }
+  main img.logo {
+    margin-top: 30px;
+    max-width: 260px;
+    height: auto; }
 
 #map {
   margin-top: 20px;
