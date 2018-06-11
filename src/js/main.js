@@ -15,7 +15,12 @@ $(function() {
         { src: 'img/background-04.jpg' },
         { src: 'img/background-05.jpg' },
         { src: 'img/background-06.jpg' },
-        { src: 'img/background-07.jpg' }
+        { src: 'img/background-07.jpg' },
+        { src: 'img/background-08.jpg' },
+        { src: 'img/background-09.jpg' },
+        { src: 'img/background-10.jpg' },
+        { src: 'img/background-11.jpg' },
+        { src: 'img/background-12.jpg' }
     ]
     
     // Suffle the array
